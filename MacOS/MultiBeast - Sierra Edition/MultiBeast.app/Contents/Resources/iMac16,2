@@ -1,0 +1,26 @@
+	<dict>
+		<key>BiosReleaseDate</key>
+		<string>08/28/2015</string>
+		<key>BiosVendor</key>
+		<string>Apple Inc.</string>
+		<key>BiosVersion</key>
+		<string>IM162.88Z.0206.B00.1508281353</string>
+		<key>Board-ID</key>
+		<string>Mac-FFE5EF870D7BA81A</string>
+		<key>BoardType</key>
+		<integer>10</integer>
+		<key>BoardVersion</key>
+		<string>iMac16,2</string>
+		<key>ChassisType</key>
+		<string>13</string>
+		<key>Family</key>
+		<string>iMac</string>
+		<key>LocationInChassis</key>
+		<string>Part Component</string>
+		<key>Manufacturer</key>
+		<string>Apple Inc.</string>
+		<key>ProductName</key>
+		<string>iMac16,2</string>
+		<key>SerialNumber</key>
+		<string>C02QXXXXGG78</string>
+	</dict>

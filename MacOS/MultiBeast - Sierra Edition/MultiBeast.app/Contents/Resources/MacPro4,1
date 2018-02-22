@@ -1,0 +1,32 @@
+<dict>
+<key>BiosReleaseDate</key>
+<string>01/22/10</string>
+<key>BiosVendor</key>
+<string>Apple Inc.</string>
+<key>BiosVersion</key>
+<string>MP41.88Z.0081.B08.1001221313</string>
+<key>Board-ID</key>
+<string>Mac-F221BEC8</string>
+<key>BoardManufacturer</key>
+<string>Apple Inc.</string>
+<key>BoardType</key>
+<integer>11</integer>
+<key>ChassisAssetTag</key>
+<string>Pro-Enclosure</string>
+<key>ChassisManufacturer</key>
+<string>Apple Inc.</string>
+<key>ChassisType</key>
+<string>06</string>
+<key>Family</key>
+<string>Mac Pro</string>
+<key>Manufacturer</key>
+<string>Apple Inc.</string>
+<key>Mobile</key>
+<false/>
+<key>ProductName</key>
+<string>MacPro4,1</string>
+<key>SerialNumber</key>
+<string>FC9433DY4PC</string>
+<key>Version</key>
+<string>1.0</string>
+</dict>

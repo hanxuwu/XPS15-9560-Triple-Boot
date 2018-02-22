@@ -1,0 +1,36 @@
+	<dict>
+		<key>BiosReleaseDate</key>
+		<string>06/25/2017</string>
+		<key>BiosVendor</key>
+		<string>Apple Inc.</string>
+		<key>BiosVersion</key>
+		<string>IM182.88Z.0145.B07.1705082121</string>
+		<key>Board-ID</key>
+		<string>Mac-77F17D7DA9285301</string>
+		<key>BoardManufacturer</key>
+		<string>Apple Inc.</string>
+		<key>BoardType</key>
+		<integer>10</integer>
+		<key>BoardVersion</key>
+		<string>iMac18,2</string>
+		<key>ChassisAssetTag</key>
+		<string></string>
+		<key>ChassisManufacturer</key>
+		<string>Apple Inc.</string>
+		<key>ChassisType</key>
+		<string>13</string>
+		<key>Family</key>
+		<string>iMac</string>
+		<key>LocationInChassis</key>
+		<string>Part Component</string>
+		<key>Manufacturer</key>
+		<string>Apple Inc.</string>
+		<key>ProductName</key>
+		<string>iMac18,2</string>
+		<key>SerialNumber</key>
+		<string>C02T0000J1G5</string>
+		<key>Trust</key>
+		<false/>
+		<key>Version</key>
+		<string>1.0</string>
+	</dict>

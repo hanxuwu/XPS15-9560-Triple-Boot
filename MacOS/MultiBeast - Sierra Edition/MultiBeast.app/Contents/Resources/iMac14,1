@@ -1,0 +1,32 @@
+<dict>
+<key>BiosReleaseDate</key>
+<string>09/03/2013</string>
+<key>BiosVendor</key>
+<string>Apple Inc.</string>
+<key>BiosVersion</key>
+<string>IM141.88Z.0118.B00.1309031248</string>
+<key>Board-ID</key>
+<string>Mac-031B6874CF7F642A</string>
+<key>BoardManufacturer</key>
+<string>Apple Inc.</string>
+<key>BoardType</key>
+<integer>10</integer>
+<key>ChassisAssetTag</key>
+<string>iMac-Aluminum</string>
+<key>ChassisManufacturer</key>
+<string>Apple Inc.</string>
+<key>ChassisType</key>
+<string>13</string>
+<key>Family</key>
+<string>iMac</string>
+<key>Manufacturer</key>
+<string>Apple Inc.</string>
+<key>Mobile</key>
+<false/>
+<key>ProductName</key>
+<string>iMac14,1</string>
+<key>SerialNumber</key>
+<string>C02LXB47F8J2</string>
+<key>Version</key>
+<string>1.0</string>
+</dict>

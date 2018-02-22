@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UEFIBoot</key>
+    <string>Installs Clover bootloader in UEFI mode to the EFI System Partition of the selected drive. Includes the following Clover packages: Install for UEFI booting only, Install Clover to the ESP and Drivers64UEFI/OsxAptioFix2Drv-64.efi. Recommended for 7/8/9/100 Series CustoMac desktops and all UEFI capable systems.
+        
+        UEFI Boot Mode pre-configured choices:
+            Bootloaders -> Clover v2.4k r4173 UEFI Boot Mode
+            Drivers -> Misc -> FakeSMC v6.25-333-g05e0f4be.1759
+            Customize -> System Definition -> iMac -> iMac 14,2</string>
+	<key>LegacyBoot</key>
+    <string>Installs Clover bootloader in Legacy mode to the EFI System Partition of the selected drive. Includes the following Clover packages: Bootloader/Install boot0af in MBR, CloverEFI/CloverEFI 64-bits SATA. Adds ACPI/DSDT/Fixes/AddDTGP_0001=YES, ACPI/DSDT/Fixes/FixHPET_0010=YES, ACPI/DSDT/Fixes/FixHDA_8000=YES, ACPI/DSDT/Fixes/FixIPIC_0040=YES and FixUSB_1000=YES to CustoMac Default config.plist to support BIOS-based systems. Recommended for 5/6 Series CustoMac desktops and all BIOS based systems.
+        
+        Legacy Boot Mode pre-configured choices:
+            Bootloaders -> Clover v2.4k r4173 Legacy Boot Mode
+            Drivers -> Misc -> FakeSMC v6.25-333-g05e0f4be.1759
+            Customize -> System Definition -> iMac -> iMac 14,2</string>
+	<key>NoSelection</key>
+	<string>Quick Start will load a pre-built configuration based on which option is chosen. If you don't want to use any of these pre-built options, you can build your own by selecting a bootloader, theme and kexts.</string>
+</dict>
+</plist>

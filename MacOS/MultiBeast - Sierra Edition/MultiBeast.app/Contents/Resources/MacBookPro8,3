@@ -1,0 +1,32 @@
+<dict>
+<key>BiosReleaseDate</key>
+<string>10/31/11</string>
+<key>BiosVendor</key>
+<string>Apple Inc.</string>
+<key>BiosVersion</key>
+<string>MBP81.88Z.0047.B26.1110311252</string>
+<key>Board-ID</key>
+<string>Mac-942459F5819B171B</string>
+<key>BoardManufacturer</key>
+<string>Apple Inc.</string>
+<key>BoardType</key>
+<integer>10</integer>
+<key>ChassisAssetTag</key>
+<string>MacBook-Aluminum</string>
+<key>ChassisManufacturer</key>
+<string>Apple Inc.</string>
+<key>ChassisType</key>
+<string>08</string>
+<key>Family</key>
+<string>MacBook Pro</string>
+<key>Manufacturer</key>
+<string>Apple Inc.</string>
+<key>Mobile</key>
+<true/>
+<key>ProductName</key>
+<string>MacBookPro8,3</string>
+<key>SerialNumber</key>
+<string>C02F8388DF92</string>
+<key>Version</key>
+<string>1.0</string>
+</dict>

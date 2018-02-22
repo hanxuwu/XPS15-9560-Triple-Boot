@@ -30,7 +30,7 @@ Dell XPS15 9560 triple-boot with MacOS  Pop_OS  Win10 Tutorial
 
 ## Things that work  
 __*Everything else!*__  
-
+![image](https://github.com/hanxuwu/XPS15-9560-Triple-Boot/blob/master/DOCUMENTS/SCREENSHOTS/systeminfo.png)  
 # Prepare the Installation (in Windows)  
 
 1. Update SSD firmware to the latest(use DELL support)  
@@ -56,9 +56,9 @@ __*Everything else!*__
     `list partiton`  
     `select Partition 1`  
     ![image](https://github.com/hanxuwu/XPS15-9560-Triple-Boot/blob/master/DOCUMENTS/SCREENSHOTS/diskpart.PNG)  
-    - viii.use DiskGenius select the uDisk click `assign the drive letter`and `unhidden the current partition` then `save the changes`  
+    - viii.use `DiskGenius` select the uDisk click `assign the drive letter`and `unhidden the current partition` then `save the changes`  
     - ix. now you could see the EFI partition in computer  open the EFI
-    - x. replace the `CLOVER` with `MacOS/CLOVER`(offer by gunslinger23)  
+    - x. replace the `CLOVER` with `MacOS/XPS15-9560-High-Sierra-from(gunslinger23)/CLOVER`(offer by gunslinger23)  
     - Now you've got the OSX udisk
     
 
@@ -147,18 +147,19 @@ __*Everything else!*__
     - iii. reboot and choose `boot from Mac`  in CLOVER  
     - iv.  It will take about 10 minutes to install Mac  
 4. boot without Udisk  
-    - i. use `EFI mount` 
+    - i. use `MacOS/EFI mount` 
     - ii. mount EFI `USB` and `Toshiba XG4 THNSN51T02DUK`,if you could mount follow the step vi.
     - iii. open the `terminal`  
     - iv. input  `diskutil list`  and remember the EFI drive id (in my computer it's `disk0s1`)  
+   ![image](https://github.com/hanxuwu/XPS15-9560-Triple-Boot/blob/master/DOCUMENTS/SCREENSHOTS/diskutil.png)  
     - v. input the following command to show the EFI  
     `mkdir /Volumes/efi`  
-    `sudo mount -t msdos /dev/disk0s1 /volumes/efi`  
+    `sudo mount -t msdos /dev/disk0s1 /Volumes/efi`  
     - vi. replace the `CLOVER` in `EFI` with the `CLOVER` in USB  
     - vii. Eject the Udisk now we could boot without the Udisk  
 
 5. Install kext  
-    - i. open `Kext Utility` and drag kexts in `Post-install/SLE-Kexts` to `Kext Utility`  
+    - i. open `MacOS/Kext Utility` and drag kexts in `Post-install/SLE-Kexts` to `Kext Utility`  
     - ii. reboot  
     - iii. if you could open `EFI/clover/kexts/Other` follow step v  
     - iv. if you can't find EFI partition open `terminal` and input  
@@ -176,12 +177,12 @@ __*Everything else!*__
 7. Make Trackpad control panel work  
     - i. install VoodooPS2Controller.kext follow RehabMan's instruction in https://github.com/RehabMan/OS-X-Voodoo-PS2-Controller/wiki/How-to-Install  
     - ii. use `shift+command+G` and input `/System/Library/Extensions`(abbreviated to /S/L/E) open the folder
-    - iii. copy kext to `/S/L/E`  
+    - iii. copy `MacOS/RehabMan-Voodoo-2017-1130/Release/VoodooPS2Controller.kext` to `/S/L/E`  
     - iv. remove  `/S/L/E/AppleACPIPS2Nub.kext` and `remove /S/L/E/ApplePS2Controller.kext`  use the follow command  
     `sudo rm -rf /System/Library/Extensions/AppleACPIPS2Nub.kext`
     `sudo rm -rf /System/Library/Extensions/ApplePS2Controller.kext`
-    - v. copy `org.rehabman.voodoo.driver.Daemon.plist`to `Library/LaunchDaemons`  
-    - vi. copy `Release/VoodooPS2Daemon`to `/usr/bin`  
+    - v. copy `MacOS/RehabMan-Voodoo-2017-1130/org.rehabman.voodoo.driver.Daemon.plist`to `Library/LaunchDaemons`  
+    - vi. copy `MacOS/RehabMan-Voodoo-2017-1130/Release/VoodooPS2Daemon`to `/usr/bin`  
     - vii. reboot rhe you could see the Trackpad control panel  
     ![image](https://github.com/hanxuwu/XPS15-9560-Triple-Boot/blob/master/DOCUMENTS/SCREENSHOTS/trackpadpanel.png)  
 

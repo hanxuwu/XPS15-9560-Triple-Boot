@@ -1,0 +1,32 @@
+<dict>
+<key>BiosReleaseDate</key>
+<string>05/10/12</string>
+<key>BiosVendor</key>
+<string>Apple Inc.</string>
+<key>BiosVersion</key>
+<string>MBA51.88Z.00EF.B00.1205221442</string>
+<key>Board-ID</key>
+<string>Mac-2E6FAB96566FE58C</string>
+<key>BoardManufacturer</key>
+<string>Apple Inc.</string>
+<key>BoardType</key>
+<integer>10</integer>
+<key>ChassisAssetTag</key>
+<string>Air-Enclosure</string>
+<key>ChassisManufacturer</key>
+<string>Apple Inc.</string>
+<key>ChassisType</key>
+<string>10</string>
+<key>Family</key>
+<string>MacBook Air</string>
+<key>Manufacturer</key>
+<string>Apple Inc.</string>
+<key>Mobile</key>
+<true/>
+<key>ProductName</key>
+<string>MacBookAir5,2</string>
+<key>SerialNumber</key>
+<string>C02KV455DRVC</string>
+<key>Version</key>
+<string>1.0</string>
+</dict>

@@ -1,0 +1,32 @@
+<dict>
+<key>BiosReleaseDate</key>
+<string>10/20/11</string>
+<key>BiosVendor</key>
+<string>Apple Inc.</string>
+<key>BiosVersion</key>
+<string>MM51.88Z.0077.B0F.1110201309</string>
+<key>Board-ID</key>
+<string>Mac-8ED6AF5B48C039E1</string>
+<key>BoardManufacturer</key>
+<string>Apple Inc.</string>
+<key>BoardType</key>
+<integer>10</integer>
+<key>ChassisAssetTag</key>
+<string>Mini-Aluminum</string>
+<key>ChassisManufacturer</key>
+<string>Apple Inc.</string>
+<key>ChassisType</key>
+<string>16</string>
+<key>Family</key>
+<string>Mac mini</string>
+<key>Manufacturer</key>
+<string>Apple Inc.</string>
+<key>Mobile</key>
+<false/>
+<key>ProductName</key>
+<string>Macmini5,1</string>
+<key>SerialNumber</key>
+<string>C02F3630DJD0</string>
+<key>Version</key>
+<string>1.0</string>
+</dict>

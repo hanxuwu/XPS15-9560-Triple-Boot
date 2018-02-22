@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Name</key>
+        <array>
+            <string>USB</string>
+            <string></string>
+        </array>
+        <key>Children</key>
+        <array>
+            <array>
+                <string>3rd Party USB 3.0</string>
+                <string>Enables 3rd Party USB 3.0 controller support. Installs GenericUSBXHCI.kext to /Library/Extensions.</string>
+                <string>GenericUSBXHCI-v1.2.11.pkg</string>
+            </array>
+            <array>
+                <string>7/8/9 Series USB Support</string>
+                <string>Enables full USB 2.0 and 3.0 support on 7/8/9 Series motherboards. Installs FakePCIID.kext and FakePCIID_XHCIMux.kext to /Library/Extensions.</string>
+                <string>FakePCIID_XHCIMux-v1.3.9.pkg</string>
+            </array>
+            <array>
+                <string>Increase Max Port Limit 9 Series</string>
+                <string>Enables USB 2.0 and 3.0 support on 9 Series motherboards. Adds Raise Port Limit Patch to Volumes/EFI/EFI/CLOVER/config.plist and installs USBInjectAll.kext to /Library/Extensions.</string>
+                <string>Clover-USB-Port-Limit-Sierra-9-Series.pkg</string>
+            </array>
+            <array>
+                <string>Increase Max Port Limit 100 Series</string>
+                <string>Enables USB 2.0 and 3.0 support on 100 Series motherboards. Adds Raise Port Limit Patch to Volumes/EFI/EFI/CLOVER/config.plist and installs USBInjectAll.kext to /Library/Extensions.</string>
+                <string>Clover-USB-Port-Limit-Sierra-100-Series.pkg</string>
+            </array>
+            <array>
+                <string>Increase Max Port Limit 200 Series</string>
+                <string>Enables USB 2.0 and 3.0 support on 200 Series motherboards. Adds Raise Port Limit Patch to Volumes/EFI/EFI/CLOVER/config.plist and installs USBInjectAll.kext and XHCI-200-series-injector.kext to /Library/Extensions.</string>
+                <string>Clover-USB-Port-Limit-Sierra-200-Series.pkg</string>
+            </array>
+        </array>
+    </dict>
+</plist>
