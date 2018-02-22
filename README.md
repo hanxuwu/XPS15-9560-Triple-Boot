@@ -70,14 +70,16 @@ __*Everything else!*__
      ![image](https://github.com/hanxuwu/XPS15-9560-Triple-Boot/blob/master/DOCUMENTS/SCREENSHOTS/etcherflashselected.png)  
 
 6. get Win10 onto a USB drive:  
-    - i. In __Windows__ environment: just download the ultraISO burn images to USB drives,then you get the the win10 boot disk. If you could only access to ubuntu follow the step ii.
-    - ii. In __Ubuntu__  environment(It's quite useful,in case you have problem with installing windows)  
-    - iii.Install gparted  
+    - i. In __Windows__ environment: just download the ultraISO burn images to USB drives,then you get the the win10 boot disk.
+    - ii. Download DELL 1830 WiFi Driver in https://www.dell.com/support/home/au/en/aubsdt1/drivers/driversdetails?driverId=58FTM  copy to USB drive,otherwise you could not access to internet after installing the Win10.
+    - iii. If you could only access to ubuntu follow the step iv.
+    - iv. In __Ubuntu__  environment(It's quite useful,in case you have problem with installing windows)  
+    - v.Install gparted  
     `sudo apt-get install gparted`  
     `sudo gparted`  
-    - iv. unmount the U drive  
+    - vi. unmount the U drive  
     ![image](https://github.com/hanxuwu/XPS15-9560-Triple-Boot/blob/master/DOCUMENTS/SCREENSHOTS/umount.png)  
-    - v. install woeusb make win10 boot  
+    - vii. install woeusb make win10 boot  
     `sudo add-apt-repository ppa:nilarimogard/webupd8`  
     `sudo apt update`  
     `sudo apt install woeusb`  
@@ -118,16 +120,19 @@ __*Everything else!*__
     h. Virtualization Support  
 &ensp;&ensp;i. (Everything on)​  
     i. The rest is personal preference.​  
+
+8. If you want replace the wireless Card and don't want add the third antenna,connect the `black wire to gray` and connect `white wire to white `
     
 # Install MacOS  
 1. boot macOSUtility
     - i. press F12 to boot from the Udisk then choose mac usb press`space`  
     - ii. choose the second one `boot macOS with selected option`  and wait for about 2 minutes  
     - iii. choose `Use English for the main language`  
-    - iv. choose `Disk Utility`  
-    - v. select `Toshiba XG4 THNSN51T02DUK`
-    - vi. erase with selected `format:Mac OS Extended (Journaled)` and `GUID Partition Map`  
-    - vii. Partition with selected `Mac OS Extended(Journaled)`  
+2. disk partition and format
+    - i. choose `Disk Utility`  
+    - ii. select `Toshiba XG4 THNSN51T02DUK`
+    - iii. `erase` with selected `format:Mac OS Extended (Journaled)` and `GUID Partition Map`  
+    - iv. `Partition` with selected `Mac OS Extended(Journaled)`  
 
         |    Partition    | size |  
         | -------       | ------: |  
@@ -136,9 +141,118 @@ __*Everything else!*__
         | WIN10           |  512 |  
         | Ubuntu          |  80  |  
         | Res             |46.88 |  
+3. install MacOS
+    - i. close Disk Utility and choose `install macOS`  
+    - ii. click `continue` click `agree` select `Mac Partition` then click `install`  i
+    - iii. reboot and choose `boot from Mac`  in CLOVER  
+    - iv.  It will take about 10 minutes to install Mac  
+4. boot without Udisk  
+    - i. use `EFI mount` 
+    - ii. mount EFI `USB` and `Toshiba XG4 THNSN51T02DUK`,if you could mount follow the step vi.
+    - iii. open the `terminal`  
+    - iv. input  `diskutil list`  and remember the EFI drive id (in my computer it's `disk0s1`)  
+    - v. input the following command to show the EFI  
+    `mkdir /Volumes/efi`  
+    `sudo mount -t msdos /dev/disk0s1 /volumes/efi`  
+    - vi. replace the `CLOVER` in `EFI` with the `CLOVER` in USB  
+    - vii. Eject the Udisk now we could boot without the Udisk  
+
+5. Install kext  
+    - i. open `Kext Utility` and drag kexts in `Post-install/SLE-Kexts` to `Kext Utility`  
+    - ii. reboot  
+    - iii. if you could open `EFI/clover/kexts/Other` follow step v  
+    - iv. if you can't find EFI partition open `terminal` and input  
+    `sudo mkdir /Volumes/efi`  
+    `sudo mount -t msdos /dev/disk0s1 /volumes/efi`  
+    - v. keep the `CoreDisplayFixup.kext`(if 4K Touch Screen)
+    - vi. delete other kexts  
+    - vii. copy kexts in `Post-install/CLOVER-Kexts` to this folder  
+
+6. Make ComboJack work
+    - i. unpack `Post-install/ComboJack Installer.zip`  
+    - ii. use terminal `cd`  to  folder `ComboJack Installer`
+    - iii. run install.sh  
+    `./install sh`  
+7. Make Trackpad control panel work  
+    - i. install VoodooPS2Controller.kext follow RehabMan's instruction in https://github.com/RehabMan/OS-X-Voodoo-PS2-Controller/wiki/How-to-Install  
+    - ii. use `shift+command+G` and input `/System/Library/Extensions`(abbreviated to /S/L/E) open the folder
+    - iii. copy kext to `/S/L/E`  
+    - iv. remove  `/S/L/E/AppleACPIPS2Nub.kext` and `remove /S/L/E/ApplePS2Controller.kext`  use the follow command  
+    `sudo rm -rf /System/Library/Extensions/AppleACPIPS2Nub.kext`
+    `sudo rm -rf /System/Library/Extensions/ApplePS2Controller.kext`
+    - v. copy `org.rehabman.voodoo.driver.Daemon.plist`to `Library/LaunchDaemons`  
+    - vi. copy `Release/VoodooPS2Daemon`to `/usr/bin`  
+    - vii. reboot rhe you could see the Trackpad control panel  
+    ![image](https://github.com/hanxuwu/XPS15-9560-Triple-Boot/blob/master/DOCUMENTS/SCREENSHOTS/trackpadpanel.png)  
+
+
+
+# Install Pop_OS!  
+
+1. boot Pop_OS! installation    
+    - i. press F12 to boot from UEFI: POP_OS Udisk  
+    - ii. The you could see following pic,`enter`  
+    ![image](https://github.com/hanxuwu/XPS15-9560-Triple-Boot/blob/master/DOCUMENTS/SCREENSHOTS/popos.png)  
+2. installing the Pop_OS  
+    - i.now you will be at the Pop!_OS desktop  click `install pop_os icon`  
+    ![image](https://github.com/hanxuwu/XPS15-9560-Triple-Boot/blob/master/DOCUMENTS/SCREENSHOTS/poplivedesktop.jpg)  
+    - ii.First we have to select the language we want to use:  
+    ![image](https://github.com/hanxuwu/XPS15-9560-Triple-Boot/blob/master/DOCUMENTS/SCREENSHOTS/selectlanguagepop.jpg)  
+    - iii. select `Something else`  
+    ![image](https://github.com/hanxuwu/XPS15-9560-Triple-Boot/blob/master/DOCUMENTS/SCREENSHOTS/somethingelse.PNG)  
+    - iv. select the `Pop_Os` partition which we assigned before  
+    - v. select Ext 4 as file type and / (means root) as the mount point.  
+    ![image](https://github.com/hanxuwu/XPS15-9560-Triple-Boot/blob/master/DOCUMENTS/SCREENSHOTS/InstallingpopOS.png)  
+    - vi. confirm that you want to make changes to your hard disk (hard drive)  
+    ![image](https://github.com/hanxuwu/XPS15-9560-Triple-Boot/blob/master/DOCUMENTS/SCREENSHOTS/writechanges.jpg)  
+    - vii. Then Pop!_OS should start installing!  
+    ![image](https://github.com/hanxuwu/XPS15-9560-Triple-Boot/blob/master/DOCUMENTS/SCREENSHOTS/installedpopos.jpg)  
+
+3. repair bluetooth drive  
+    - i. install `blueman`  
+    `sudo apt install blueman`  
+    - ii.The firmware blob that is needed by Broadcom devices is not supplied by default, and it has to be supplied manually.  
+    - iii. copy `Pop_OS/BCM-0a5c-6410.hcd` into /lib/firmware/brcm/ and then reboot your device.  
+    `wget https://memcpy.io/files/2017-10-28/BCM-0a5c-6410.hcd`  
+    `sudo cp BCM-0a5c-6410.hcd /lib/firmware/brcm/`  
+    `sudo chmod 0644 /lib/firmware/brcm/BCM-0a5c-6410.hcd`  
+    `sudo reboot`  
+# Install Pop_OS!   
+1. boot WIN10 installation    
+    - i. press F12 to boot from UEFI: win10 Udisk    
+2. installing the win10  
+    - i. press F12 to boot from UEFI: win10 Udisk
+    - ii.select the `win10` partition which we assigned before,then click `delete`,it should be the `unallocate` 
+    - iii. select this `unallocate memory` then click `continue`   install win10  
+3. delete bootManager  
+    - i. press F12 enter Bios setting  
+    - ii. delete `windows boot manager`  
+4. install Driver   
+    - i.install wire driver in `Win10/Driver/58FTM`,then you could access to the internet  
+    - ii. install `DELL Support`  install other drivers  
     
 
 
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+    
+
+
+
+
+
+ 
 
 
 
@@ -166,4 +280,7 @@ __*Everything else!*__
 
 References:  
 [1] KNNSpeed [Guide] Dell XPS 15 9560: 4K Touch, 1TB SSD, 32GB RAM, 100% AdobeRGB  
-[2] gunslinger23/XPS15-9560-High-Sierra
+https://www.tonymacx86.com/threads/guide-dell-xps-15-9560-4k-touch-1tb-ssd-32gb-ram-100-adobergb.224486/  
+[2] gunslinger23/XPS15-9560-High-Sierra  https://github.com/gunslinger23/XPS15-9560-High-Sierra  
+[3] Pop_OS install instruction   http://pop.system76.com/docs/install-pop-os/  
+[4] Fixing bluetooth on the XPS 15 9550 on Ubuntu  https://memcpy.io/fixing-bluetooth-on-the-xps-15-9550-on-ubuntu.html
