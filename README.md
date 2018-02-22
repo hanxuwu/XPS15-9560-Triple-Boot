@@ -30,6 +30,7 @@ Dell XPS15 9560 triple-boot with MacOS  Pop_OS  Win10 Tutorial
 
 ## Things that work  
 __*Everything else!*__  
+![image](https://github.com/hanxuwu/XPS15-9560-Triple-Boot/blob/master/DOCUMENTS/SCREENSHOTS/Tripleboot.jpg)  
 ![image](https://github.com/hanxuwu/XPS15-9560-Triple-Boot/blob/master/DOCUMENTS/SCREENSHOTS/systeminfo.png)  
 # Prepare the Installation (in Windows)  
 
@@ -218,7 +219,7 @@ __*Everything else!*__
     `sudo cp BCM-0a5c-6410.hcd /lib/firmware/brcm/`  
     `sudo chmod 0644 /lib/firmware/brcm/BCM-0a5c-6410.hcd`  
     `sudo reboot`  
-# Install Pop_OS!   
+# Install WIN10   
 1. boot WIN10 installation    
     - i. press F12 to boot from UEFI: win10 Udisk    
 2. installing the win10  
