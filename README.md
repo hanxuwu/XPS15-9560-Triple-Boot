@@ -27,11 +27,14 @@ Dell XPS15 9560 triple-boot with MacOS  Pop_OS  Win10 Tutorial
 ### in Pop_OS  
 
 1. SD Card  
+2. HD630
 
 ## Things that work  
 __*Everything else!*__  
 ![image](https://github.com/hanxuwu/XPS15-9560-Triple-Boot/blob/master/DOCUMENTS/SCREENSHOTS/Tripleboot.jpg)  
 ![image](https://github.com/hanxuwu/XPS15-9560-Triple-Boot/blob/master/DOCUMENTS/SCREENSHOTS/systeminfo.png)  
+![image](https://github.com/hanxuwu/XPS15-9560-Triple-Boot/blob/master/DOCUMENTS/SCREENSHOTS/PopOs.gif)  
+
 # Prepare the Installation (in Windows)  
 
 1. Update SSD firmware to the latest(use DELL support)  
