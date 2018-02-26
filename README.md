@@ -27,7 +27,7 @@ Dell XPS15 9560 triple-boot with MacOS  Pop_OS  Win10 Tutorial
 ### In Pop_OS  
 
 1. SD Card  
-2. HD630
+2. ~~HD630~~
 
 ## Things that work  
 __*Everything else!*__  
@@ -225,12 +225,19 @@ __*Everything else!*__
     `sudo cp BCM-0a5c-6410.hcd /lib/firmware/brcm/`  
     `sudo chmod 0644 /lib/firmware/brcm/BCM-0a5c-6410.hcd`  
     `sudo reboot`  
+4. Switching to Intel Graphics (by trixt3r88)   
+    - i.Edit your `/etc/default/grub` file by setting the `GRUB_CMDLINE_LINUX_DEFAULT` property as follows:  
+    `GRUB_CMDLINE_LINUX_DEFAULT="quiet splash acpi_rev_override=5"`  
+    - ii.Then run  
+    `sudo update-grub`  
+    - iii.Then reboot and everything should work fine.You could use `Nvdia X Webdriver` switch the GPU.  
+
 # Install WIN10   
 1. Boot WIN10 installation    
     - i. Press F12 to boot from UEFI: win10 Udisk    
 2. Installing the win10  
     - i. Press F12 to boot from UEFI: win10 Udisk
-    - ii.Pselect the `win10` partition which we assigned before,then click `delete`,it should be the `unallocate` 
+    - ii.Select the `win10` partition which we assigned before,then click `delete`,it should be the `unallocate` 
     - iii. Select this `unallocate memory` then click `continue`   install win10  
 3. Delete bootManager  
     - i. Press F12 enter Bios setting  
@@ -291,4 +298,5 @@ References:
 https://www.tonymacx86.com/threads/guide-dell-xps-15-9560-4k-touch-1tb-ssd-32gb-ram-100-adobergb.224486/  
 [2] gunslinger23/XPS15-9560-High-Sierra  https://github.com/gunslinger23/XPS15-9560-High-Sierra  
 [3] Pop_OS install instruction   http://pop.system76.com/docs/install-pop-os/  
-[4] Fixing bluetooth on the XPS 15 9550 on Ubuntu  https://memcpy.io/fixing-bluetooth-on-the-xps-15-9550-on-ubuntu.html
+[4] Fixing bluetooth on the XPS 15 9550 on Ubuntu  https://memcpy.io/fixing-bluetooth-on-the-xps-15-9550-on-ubuntu.html  
+[5] Pop!\_OS switch to iGPU https://www.reddit.com/r/pop_os/comments/7n9pnt/pop_os_dell_xps_15_9560_switching_to_intel/
