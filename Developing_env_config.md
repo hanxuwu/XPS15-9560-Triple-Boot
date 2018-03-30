@@ -19,7 +19,7 @@
 
     -ii. Setting Jupyter startpath  
         &ensp;&ensp;a.Delete `%USERPROFILE%` in Target  
-        &ensp;&ensp;b.Replace the `%USERPROFILE%` with the dir path  
+        &ensp;&ensp;b.Replace the `%USERPROFILE%` with the dir path   
 >       C:\Users\HANXU\Anaconda3\python.exe C:\Users\HANXU\Anaconda3\cwp.py  
 >       C:\Users\HANXU\Anaconda3 C:\Users\HANXU\Anaconda3\python.exe  
 >       C:\Users\HANXU\Anaconda3\Scripts\jupyter-notebook-script.py  
@@ -92,6 +92,10 @@ b.You should place this command in your .bash_profile, .bashrc, .zshrc or other 
 > `eval $(thefuck --alias)`  
 > `# You can use whatever you want as an alias, like for Mondays:`  
 > `eval $(thefuck --alias FUCK)`  
+
+5.Install pip
+`$ sudo apt-get install python-pip python-dev build-essential`
+`$ sudo pip install --upgrade pip` 
 
 
 
